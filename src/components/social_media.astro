@@ -11,17 +11,21 @@ const mail = href.startsWith("mailto:");
 
 {
     !mail && (
-        <a data-text={name} href={href} target="_blank" rel="noopener noreferrer">
-             <div><slot /></div>
-        </a>
+        <div>
+            <a data-text={name} href={href} target="_blank" rel="noopener noreferrer">
+                <slot />
+            </a>
+        </div>
     )
 }
 
 {
     mail && (
-        <a data-text={name}  href={href}>
-            <div><slot /></div>
-        </a>
+        <div>
+            <a data-text={name}  href={href}>
+                <slot />
+            </a>
+        </div>
     )
 }
 
