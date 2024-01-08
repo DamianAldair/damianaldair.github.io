@@ -1,0 +1,61 @@
+---
+const iconsize = 24;
+---
+
+<script>
+    const scrollBp = 300;
+    const up = document.getElementById("up") as HTMLElement;
+    window.onscroll = () => {
+        if (
+            document.body.scrollTop > scrollBp ||
+            document.documentElement.scrollTop > scrollBp
+        ) {
+            up.style.display = "flex";
+            up.style.justifyContent = "center";
+            up.style.alignItems = "center";
+        } else {
+            up.style.display = "none";
+        }
+    };
+</script>
+
+<a id="up" href="#">
+    <svg
+        width={iconsize}
+        height={iconsize}
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"> </path>
+        <path d="M12 5l0 14"> </path>
+        <path d="M18 11l-6 -6"> </path>
+        <path d="M6 11l6 -6"> </path>
+    </svg>
+</a>
+
+<style>
+    a {
+        --size: 35px;
+        display: none;
+        position: fixed;
+        bottom: 42px;
+        right: 35px;
+        z-index: 99;
+        height: var(--size);
+        width: var(--size);
+        border: none;
+        outline: none;
+        background-color: rgb(63 81 181 / 25%);
+        color: white;
+        cursor: pointer;
+        border-radius: 100px;
+    }
+
+    a:hover {
+        background-color: rgb(63 81 181 / 50%);
+    }
+</style>
