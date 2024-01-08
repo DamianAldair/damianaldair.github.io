@@ -1,19 +1,71 @@
+---
+import SocialMedia from "./social_media.astro";
+import GitHubIcon from "./icons/github.astro";
+import LinkedInIcon from "./icons/linkedin.astro";
+import MailIcon from "./icons/mail.astro";
+
+const imgsize = 200;
+const iconsize = 30;
+---
+
 <section>
-    <img src="/avatar.png" alt="avatar" />
-    <div>
+    <img src="/avatar.png" alt="avatar" width={imgsize} height={imgsize} />
+    <div id="info">
         <h1>Damian Aldair</h1>
         <nav>
-            <a
+            <SocialMedia
                 href="https://www.linkedin.com/in/damian-aldair"
-                target="_blank"
-                rel="noopener noreferrer">LinkedIn</a
+                name="LinkedIn"
             >
-            <a
-                href="https://github.com/DamianAldair"
-                target="_blank"
-                rel="noopener noreferrer">GitHub</a
+                <LinkedInIcon
+                    width={iconsize - 5}
+                    height={iconsize - 5}
+                    style="padding:5px"
+                />
+            </SocialMedia>
+            <SocialMedia href="https://github.com/DamianAldair" name="GitHub">
+                <GitHubIcon width={iconsize} height={iconsize} />
+            </SocialMedia>
+            <SocialMedia
+                href="mailto:daldairgp@gmail.com"
+                name="daldairgp@gmail.com"
             >
-            <a href="mailto:daldairgp@gmail.com">daldairgp@gmail.com</a>
+                <MailIcon width={iconsize + 3} height={iconsize + 3} />
+            </SocialMedia>
         </nav>
     </div>
 </section>
+
+<style define:vars={{ imgsize }}>
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 60px 0;
+    }
+
+    img {
+        width: calc(1px * var(--imgsize));
+        height: calc(1px * var(--imgsize));
+    }
+
+    #info {
+        padding: 0px 15px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+</style>
