@@ -1,48 +1,16 @@
 ---
+import AboutSection from "../components/about_section.astro";
+import DescriptionSection from "../components/description_section.astro";
+import ExperienceSection from "../components/experience_section.astro";
+import ProjectsSection from "../components/projects_section.astro";
+import SkillsSection from "../components/skills_section.astro";
 import Layout from "../layouts/layout.astro";
-import { getXpYears } from "../scripts/utils";
 ---
 
 <Layout>
-    <section>
-        <img src="/avatar.png" alt="avatar" />
-        <div>
-            <h1>Damian Aldair</h1>
-            <nav>
-                <a
-                    href="https://www.linkedin.com/in/damian-aldair"
-                    target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a
-                >
-                <a
-                    href="https://github.com/DamianAldair"
-                    target="_blank"
-                    rel="noopener noreferrer">GitHub</a
-                >
-                <a href="mailto:daldairgp@gmail.com">daldairgp@gmail.com</a>
-            </nav>
-        </div>
-    </section>
-
-    <section>
-        <h2>{getXpYears} años de experiencia</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque id
-            libero dicta tempora, adipisci, quis eos, saepe perspiciatis quos
-            illum ipsum ea sed fugiat repellendus odit commodi illo tenetur
-            quod?
-        </p>
-    </section>
-
-    <section id="xp">
-        <h2>Experiencia</h2>
-    </section>
-
-    <section id="skills">
-        <h2>Conocimientos y aptitudes</h2>
-    </section>
-
-    <section id="projects">
-        <h2>Proyectos</h2>
-    </section>
+    <AboutSection />
+    <DescriptionSection />
+    <ExperienceSection />
+    <SkillsSection />
+    <ProjectsSection />
 </Layout>
