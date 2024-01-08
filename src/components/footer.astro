@@ -1,0 +1,28 @@
+---
+interface Props {
+    maxwidth: string;
+}
+
+const { maxwidth } = Astro.props;
+
+const year: number = new Date().getFullYear();
+---
+
+<footer>
+    © {year} - Damian Aldair
+</footer>
+
+<style define:vars={{ maxwidth }}>
+    footer {
+        max-width: var(--maxwidth);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        margin: 30px 0;
+        border-radius: 10px;
+        background-color: rgb(128 128 128 / 10%);
+        color: rgb(255 255 255 / 50%);
+    }
+</style>
