@@ -1,12 +1,16 @@
 ---
-import { skills } from "../scripts/repo";
-import Skill from "./skill.astro";
+import { skills, type Skill } from "../scripts/repo";
+import SkillItem from "./skill_item.astro";
 ---
 
 <section id="skills">
     <h2>Conocimientos y aptitudes</h2>
     <div>
-        {skills.map((s: string) => <Skill name={s} />)}
+        {
+            skills.map((s: Skill) => (
+                <SkillItem name={s.name} r={s.r} g={s.g} b={s.b} />
+            ))
+        }
     </div>
 </section>
 

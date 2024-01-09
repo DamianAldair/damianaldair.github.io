@@ -3,9 +3,12 @@ import { getImgFromSkill } from "../scripts/repo";
 
 interface Props {
     name: string;
+    r: number;
+    g: number;
+    b: number;
 }
 
-const { name } = Astro.props;
+const { name, r, g, b } = Astro.props;
 
 const iconsize = 60;
 const img = `/icons/${getImgFromSkill(name)}`;
@@ -16,11 +19,16 @@ const img = `/icons/${getImgFromSkill(name)}`;
     <span>{name}</span>
 </div>
 
-<style define:vars={{ iconsize }}>
+<style define:vars={{ iconsize, r, g, b }}>
     div {
         --bg: rgb(247, 247, 247);
-        --hover-bg: rgb(200, 225, 255);
-        --hover-text: rgb(0, 25, 70);
+        /* --hover-bg: rgb(200, 225, 255); */
+        --hover-bg: rgb(
+            calc(var(--r) + (255 - var(--r)) * 0.75),
+            calc(var(--g) + (255 - var(--g)) * 0.75),
+            calc(var(--b) + (255 - var(--b)) * 0.75)
+        );
+        --hover-text: rgb(var(--r), var(--g), var(--b));
         text-align: center;
         background: var(--bg);
         padding: 38px;
