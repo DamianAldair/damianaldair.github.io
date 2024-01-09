@@ -14,13 +14,13 @@ const iconsize = 60;
 const img = `/icons/${getImgFromSkill(name)}`;
 ---
 
-<div>
+<article>
     <img src={img} alt=`logo_${name}` width={iconsize} height={iconsize} />
     <span>{name}</span>
-</div>
+</article>
 
 <style define:vars={{ iconsize, r, g, b }}>
-    div {
+    article {
         --bg: rgb(247, 247, 247);
         /* --hover-bg: rgb(200, 225, 255); */
         --hover-bg: rgb(
@@ -44,11 +44,11 @@ const img = `/icons/${getImgFromSkill(name)}`;
         align-items: center;
     }
 
-    div > :not(span) {
+    article > :not(span) {
         transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
     }
 
-    div span {
+    article span {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -63,16 +63,16 @@ const img = `/icons/${getImgFromSkill(name)}`;
         transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
     }
 
-    div:hover span {
+    article:hover span {
         top: 0;
         font-size: 1.2em;
     }
 
-    div:hover {
+    article:hover {
         background: var(--hover-bg);
     }
 
-    div:hover > img {
+    article:hover > img {
         opacity: 0;
     }
 
