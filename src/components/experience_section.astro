@@ -1,11 +1,11 @@
 ---
-import SectionTitle from "./section_title.astro";
-import BriefcaseIcon from "./icons/briefcase.astro";
 import {
     experiences,
     getExperienceDate,
     type Experience,
 } from "../scripts/repo";
+import BriefcaseIcon from "./icons/briefcase.astro";
+import SectionTitle from "./section_title.astro";
 
 const iconsize = 30;
 const arrowsize = 18;
@@ -18,7 +18,7 @@ const arrowsize = 18;
     </SectionTitle>
     <div class="section">
         {
-            experiences.map((e: Experience) => (
+            experiences.toReversed().map((e: Experience) => (
                 <article>
                     <div class="date">
                         <div class="circle" />
