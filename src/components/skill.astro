@@ -1,0 +1,75 @@
+---
+import { getImgFromSkill } from "../scripts/repo";
+
+interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+
+const iconsize = 60;
+const img = `/icons/${getImgFromSkill(name)}`;
+---
+
+<div>
+    <img src={img} alt=`logo_${name}` width={iconsize} height={iconsize} />
+    <span>{name}</span>
+</div>
+
+<style define:vars={{ iconsize }}>
+    div {
+        --bg: rgb(247, 247, 247);
+        --hover-bg: rgb(200, 225, 255);
+        --hover-text: rgb(0, 25, 70);
+        text-align: center;
+        background: var(--bg);
+        padding: 38px;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        transition:
+            0.3s cubic-bezier(0.6, 0.4, 0, 1),
+            transform 0.15s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div > :not(span) {
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+    }
+
+    div span {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--hover-text);
+        border-radius: 5px;
+        font-weight: bold;
+        top: 100%;
+        transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+    }
+
+    div:hover span {
+        top: 0;
+        font-size: 1.2em;
+    }
+
+    div:hover {
+        background: var(--hover-bg);
+    }
+
+    div:hover > img {
+        opacity: 0;
+    }
+
+    img {
+        width: calc(1px * var(--iconsize));
+        height: calc(1px * var(--iconsize));
+    }
+</style>

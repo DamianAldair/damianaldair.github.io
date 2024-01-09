@@ -1,3 +1,23 @@
+---
+import { skills } from "../scripts/repo";
+import Skill from "./skill.astro";
+---
+
 <section id="skills">
     <h2>Conocimientos y aptitudes</h2>
+    <div>
+        {skills.map((s: string) => <Skill name={s} />)}
+    </div>
 </section>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 29px;
+    }
+</style>
