@@ -27,7 +27,11 @@ const arrowsize = 18;
                     <h3>{e.title}</h3>
                     <p>{e.description}</p>
                     {e.url && (
-                        <a href={e.url}>
+                        <a
+                            href={e.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Conocer más ...
                             <svg
                                 class="arrow"
