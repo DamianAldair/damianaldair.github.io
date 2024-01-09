@@ -1,8 +1,14 @@
 ---
 import SectionTitle from "./section_title.astro";
 import BriefcaseIcon from "./icons/briefcase.astro";
+import {
+    experiences,
+    getExperienceDate,
+    type Experience,
+} from "../scripts/repo";
 
 const iconsize = 30;
+const arrowsize = 18;
 ---
 
 <section id="xp">
@@ -10,4 +16,104 @@ const iconsize = 30;
         <BriefcaseIcon slot="icon" height={iconsize} width={iconsize} />
         <h2 slot="title">Experiencia</h2>
     </SectionTitle>
+    <div class="section">
+        {
+            experiences.map((e: Experience) => (
+                <article>
+                    <div class="date">
+                        <div class="circle" />
+                        <span>{getExperienceDate(e)}</span>
+                    </div>
+                    <h3>{e.title}</h3>
+                    <p>{e.description}</p>
+                    {e.url && (
+                        <a href={e.url}>
+                            Conocer más ...
+                            <svg
+                                class="arrow"
+                                width={arrowsize}
+                                height={arrowsize}
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                fill="none"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    stroke="none"
+                                    d="M0 0h24v24H0z"
+                                    fill="none"
+                                />
+                                <path d="M5 12l14 0" />
+                                <path d="M13 18l6 -6" />
+                                <path d="M13 6l6 6" />
+                            </svg>
+                        </a>
+                    )}
+                </article>
+            ))
+        }
+    </div>
 </section>
+
+<style>
+    .section {
+        border-left: 1px solid white;
+        margin-left: 14px;
+        padding-left: 35px;
+    }
+
+    .date {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+
+    .circle {
+        --size: 10px;
+        --translate: -41px;
+        height: var(--size);
+        width: var(--size);
+        background-color: white;
+        border-radius: var(--size);
+        margin-left: var(--translate);
+        margin-right: calc(-1 * var(--translate) - var(--size));
+    }
+
+    article {
+        padding-top: 5px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    span {
+        font-weight: 200;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 8px 25px;
+        margin: 15px 0;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+        gap: 15px;
+    }
+
+    a:hover {
+        background-color: rgb(255 255 255 / 15%);
+        padding-right: 23px;
+        gap: 17px;
+    }
+</style>
