@@ -1,0 +1,80 @@
+<svg width="1560"
+    height="1473"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    overflow="hidden">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="302"
+                y="453"
+                width="1560"
+                height="1473"/>
+        </clipPath>
+        <linearGradient x1="802.138"
+            y1="1477.66"
+            x2="2025.45"
+            y2="1477.66"
+            gradientUnits="userSpaceOnUse"
+            spreadMethod="reflect"
+            id="fill1">
+            <stop offset="0"
+                stop-color="#7844DC"/>
+            <stop offset="0.05"
+                stop-color="#7844DC"/>
+            <stop offset="0.5"
+                stop-color="#079EFD"/>
+            <stop offset="0.95"
+                stop-color="#0EF8D9"/>
+            <stop offset="1"
+                stop-color="#0EF8D9"/>
+        </linearGradient>
+        <linearGradient x1="636"
+            y1="900.5"
+            x2="1529"
+            y2="900.5"
+            gradientUnits="userSpaceOnUse"
+            spreadMethod="reflect"
+            id="fill2">
+            <stop offset="0"
+                stop-color="#7844DC"/>
+            <stop offset="0.05"
+                stop-color="#7844DC"/>
+            <stop offset="0.5"
+                stop-color="#079EFD"/>
+            <stop offset="0.95"
+                stop-color="#0EF8D9"/>
+            <stop offset="1"
+                stop-color="#0EF8D9"/>
+        </linearGradient>
+        <linearGradient x1="139.141"
+            y1="1478.09"
+            x2="1360.95"
+            y2="1478.09"
+            gradientUnits="userSpaceOnUse"
+            spreadMethod="reflect"
+            id="fill3">
+            <stop offset="0"
+                stop-color="#7844DC"/>
+            <stop offset="0.05"
+                stop-color="#7844DC"/>
+            <stop offset="0.5"
+                stop-color="#079EFD"/>
+            <stop offset="0.95"
+                stop-color="#0EF8D9"/>
+            <stop offset="1"
+                stop-color="#0EF8D9"/>
+        </linearGradient>
+    </defs>
+    <g clip-path="url(#clip0)"
+        transform="translate(-302 -453)">
+        <path d="M1529.29 1028.33 1638.44 1091.35C1852.18 1214.76 1925.41 1488.06 1802.01 1701.8 1678.61 1915.53 1405.31 1988.77 1191.57 1865.36L970.068 1737.48 970.068 1349.66 1082.41 1415.22 1194.29 1349.93 1194.29 1607.61 1303.47 1670.64C1409.79 1732.03 1545.74 1695.6 1607.12 1589.28 1668.51 1482.96 1632.08 1347.01 1525.76 1285.62L1414.71 1221.51 1529.29 1155.36Z"
+            fill="url(#fill1)"
+            fill-rule="evenodd"/>
+        <path d="M1082.5 453C1329.1 453 1529 653.002 1529 899.717L1529 1155.39 1195.56 1348 1195.56 1220.58 1082.5 1154.57 1080.6 1155.68 1080.52 1155.63 1304.6 1026.19 1304.6 900.17C1304.6 777.446 1205.16 677.958 1082.5 677.958 959.835 677.958 860.395 777.446 860.395 900.17L860.395 1028.48 748.016 963.571 636 1028.27 636 899.717C636 653.002 835.905 453 1082.5 453Z"
+            fill="url(#fill2)"
+            fill-rule="evenodd"/>
+        <path d="M747.647 963.471 1080.51 1155.65 969.259 1220.57 969.26 1349.19 970.069 1349.66 970.069 1350.79 748.01 1222.59 638.831 1285.62C532.511 1347.01 496.083 1482.96 557.467 1589.28 618.851 1695.6 754.802 1732.03 861.122 1670.64L970.069 1607.74 970.069 1737.48 1082.3 1802.28 973.021 1865.36C759.284 1988.77 485.98 1915.53 362.579 1701.8 239.177 1488.06 312.409 1214.76 526.146 1091.35Z"
+            fill="url(#fill3)"
+            fill-rule="evenodd"/>
+    </g>
+</svg>
