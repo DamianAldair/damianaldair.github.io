@@ -1,3 +1,13 @@
+---
+import SectionTitle from "./section_title.astro";
+import BriefcaseIcon from "./icons/briefcase.astro";
+
+const iconsize = 30;
+---
+
 <section id="xp">
-    <h2>Experiencia</h2>
+    <SectionTitle>
+        <BriefcaseIcon slot="icon" height={iconsize} width={iconsize} />
+        <h2 slot="title">Experiencia</h2>
+    </SectionTitle>
 </section>

@@ -1,10 +1,17 @@
 ---
 import { skills, type Skill } from "../scripts/repo";
 import SkillItem from "./skill_item.astro";
+import SectionTitle from "./section_title.astro";
+import BrainIcon from "./icons/brain.astro";
+
+const iconsize = 30;
 ---
 
 <section id="skills">
-    <h2>Conocimientos y aptitudes</h2>
+    <SectionTitle>
+        <BrainIcon slot="icon" height={iconsize} width={iconsize} />
+        <h2 slot="title">Conocimientos y aptitudes</h2>
+    </SectionTitle>
     <div>
         {
             skills.map((s: Skill) => (

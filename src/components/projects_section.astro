@@ -1,3 +1,13 @@
+---
+import SectionTitle from "./section_title.astro";
+import CheckupListIcon from "./icons/checkup_list.astro";
+
+const iconsize = 30;
+---
+
 <section id="projects">
-    <h2>Proyectos</h2>
+    <SectionTitle>
+        <CheckupListIcon slot="icon" height={iconsize} width={iconsize} />
+        <h2 slot="title">Proyectos</h2>
+    </SectionTitle>
 </section>
