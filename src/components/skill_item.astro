@@ -21,8 +21,6 @@ const img = `/icons/${getImgFromSkill(name)}`;
 
 <style define:vars={{ iconsize, r, g, b }}>
     article {
-        --bg: rgb(247, 247, 247);
-        /* --hover-bg: rgb(200, 225, 255); */
         --hover-bg: rgb(
             calc(var(--r) + (255 - var(--r)) * 0.75),
             calc(var(--g) + (255 - var(--g)) * 0.75),
@@ -30,7 +28,7 @@ const img = `/icons/${getImgFromSkill(name)}`;
         );
         --hover-text: rgb(var(--r), var(--g), var(--b));
         text-align: center;
-        background: var(--bg);
+        background: var(--bg-card);
         padding: 38px;
         border-radius: 5px;
         position: relative;
