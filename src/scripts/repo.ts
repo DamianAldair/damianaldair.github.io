@@ -18,14 +18,6 @@ export const skills: Skill[] = [
     { name: 'Git', r: 222, g: 76, b: 54 },
 ];
 
-export function getImgFromSkill(skill: string): string {
-    return skill
-        .trim()
-        .toLowerCase()
-        .replaceAll(' ', '_')
-        + '.svg';
-}
-
 export interface Project {
     img: string;
     name: string;
@@ -73,14 +65,3 @@ export const experiences: Experience[] = [
         description: 'Desarrollo de la versión 3.0 de la aplicación móvil para el proyecto Guatiní. Enciclopedia sobre seres vivos, principalmente offline y con posibilidades de acceder a información adicional gracias al consumo de APIs de enciclopedias libres. Rediseño de la base de datos utilizada. Diseño de la forma de despliegue y gestión  de la información local mediante la automatización de la compilación de aplicaciones móviles auxiliares con información personalizada.',
     },
 ];
-
-export function getExperienceDate(experience: Experience): string {
-    const { startYear: y1, finishYear: y2 } = experience;
-
-    if (y2 === y1) return `${y1}`;
-    if (y2 != -1) return `${y1} - ${y2}`;
-
-    const currentYear = new Date().getFullYear();
-    if (y1 != currentYear) return `${y1} - Actualidad`;
-    return 'Actualmente';
-}
