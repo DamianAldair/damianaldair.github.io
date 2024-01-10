@@ -38,7 +38,7 @@ export const projects: Project[] = [
     {
         img: 'just_transitions.png',
         name: 'JustTransitions',
-        description: 'A package to make it easy to navigate between routes using animations and customizing them with different features.',
+        description: 'Un paquete para usar con Flutter y faciliar la navegación entre rutas utilizando animaciones y personalizándolas con diferentes carácterísticas.',
         skills: [
             'dart',
             'flutter',
@@ -48,17 +48,7 @@ export const projects: Project[] = [
     {
         img: 'qr_eu_covid.png',
         name: 'QR - EU Digital COVID Certificate',
-        description: 'A package for parsing the encrypted plaintext contained in the QR code of EU COVID-19 digital vaccination certificates.',
-        skills: [
-            'dart',
-            'flutter',
-        ],
-        url: 'https://pub.dev/packages/qr_eu_digital_covid_certificate',
-    },
-    {
-        img: 'just_transitions.png',
-        name: 'QR',
-        description: 'COVID-19 digital vaccination certificates.',
+        description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado de vacunación europeo de COVID-19.',
         skills: [
             'dart',
             'flutter',
