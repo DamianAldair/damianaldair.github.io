@@ -22,7 +22,7 @@ export interface Project {
     img: string;
     name: string;
     description: string;
-    skills: string[];
+    skillImages: string[];
     url?: string;
 }
 
@@ -31,7 +31,7 @@ export const projects: Project[] = [
         img: 'just_transitions.png',
         name: 'JustTransitions',
         description: 'Un paquete para usar con Flutter y faciliar la navegación entre rutas utilizando animaciones y personalizándolas con diferentes carácterísticas.',
-        skills: [
+        skillImages: [
             'dart',
             'flutter',
         ],
@@ -41,7 +41,7 @@ export const projects: Project[] = [
         img: 'qr_eu_covid.png',
         name: 'QR - EU Digital COVID Certificate',
         description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado europeo de vacunación contra COVID-19.',
-        skills: [
+        skillImages: [
             'dart',
             'flutter',
         ],

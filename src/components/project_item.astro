@@ -3,11 +3,11 @@ interface Props {
     img: string;
     name: string;
     description: string;
-    skills: string[];
+    skillImages: string[];
     url?: string;
 }
 
-const { img, name, description, skills, url } = Astro.props;
+const { img, name, description, skillImages, url } = Astro.props;
 
 const borderradius = 5;
 const padding = 20;
@@ -37,11 +37,13 @@ const path = `/images/${img}`;
     <div class="details">
         <h3>{name}</h3>
         <p>{description}</p>
+    </div>
+    <footer>   
         <div class="skills">
             {
-                skills.map(
-                (s) =>(
-                    <img src=`/icons/${s}.svg` alt={s} width={iconsize} height={iconsize} />
+                skillImages.map(
+                (i) =>(
+                    <img src=`/icons/${i}.svg` alt={i} width={iconsize} height={iconsize} />
                 ))
             }
         </div>
@@ -72,22 +74,21 @@ const path = `/images/${img}`;
                 </a>
             )
         }
-    </div>
+    </footer>
 </article>
 
 <style define:vars={{ borderradius, padding }}>
     article {
         border-radius: calc(1px * var(--borderradius));
         background-color: var(--bg-card);
-        color: black;
+        color: white;
         width: calc((100% - 40px) / 2);
         position: relative;
     }
-
+    
     .project-img {
         border-top-left-radius: calc(1px * var(--borderradius));
         border-top-right-radius: calc(1px * var(--borderradius));
-        border-bottom: 1px solid rgb(10 10 55);
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -110,6 +111,7 @@ const path = `/images/${img}`;
         background-color: rgb(255 255 255 / 65%);
         border-radius: 100px;
         padding: 7px;
+        opacity: 0.5;
     }
     
     .fullscreen-btn svg {
@@ -123,6 +125,7 @@ const path = `/images/${img}`;
         padding: 10px;
         margin-top: -5px;
         margin-right: -5px;
+        opacity: 1;
     }
 
     .tooltip {
@@ -142,6 +145,7 @@ const path = `/images/${img}`;
         opacity: 1;
     }
 
+    footer,
     .details {
         display: flex;
         flex-direction: column;
@@ -164,19 +168,27 @@ const path = `/images/${img}`;
         --lines: 4;
         height: calc(1.7rem * var(--lines));
     }
+    
+    footer {
+        border-bottom-left-radius: calc(1px * var(--borderradius));
+        border-bottom-right-radius: calc(1px * var(--borderradius));
+        padding-top: 0;
+        background-color: rgb(255 255 255 / 3%);
+        gap: 15px;
+    }
 
     .skills {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 15px;
         margin: 20px 0;
+        
     }
 
     .more {
-        --color: rgb(10 10 55);
         text-decoration: none;
-        color: var(--color);
-        border: 1px solid var(--color);
+        color: white;
+        border: 1px solid white;
         border-radius: 5px;
         padding: 8px 25px;
         display: inline-flex;
@@ -188,7 +200,7 @@ const path = `/images/${img}`;
     }
 
     .more:hover {
-        background-color: rgba(130 130 220 / 45%);
+        background-color: rgb(255 255 255 / 15%);
         padding-right: 23px;
         gap: 17px;
     }
