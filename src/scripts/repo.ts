@@ -26,6 +26,37 @@ export function getImgFromSkill(skill: string): string {
         + '.svg';
 }
 
+export interface Project {
+    img: string;
+    name: string;
+    description: string;
+    skills: string[];
+    url?: string;
+}
+
+export const projects: Project[] = [
+    {
+        img: 'just_transitions.png',
+        name: 'JustTransitions',
+        description: 'A package to make it easy to navigate between routes using animations and customizing them with different features.',
+        skills: [
+            'dart',
+            'flutter',
+        ],
+        url: 'https://pub.dev/packages/just_transitions',
+    },
+    {
+        img: 'qr_eu_covid.png',
+        name: 'QR - EU Digital COVID Certificate',
+        description: 'A package for parsing the encrypted plaintext contained in the QR code of EU COVID-19 digital vaccination certificates.',
+        skills: [
+            'dart',
+            'flutter',
+        ],
+        url: 'https://pub.dev/packages/qr_eu_digital_covid_certificate',
+    },
+];
+
 export interface Experience {
     startYear: number;
     finishYear: number;
