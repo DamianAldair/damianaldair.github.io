@@ -14,22 +14,43 @@
         align-items: center;
         justify-content: center;
         padding: 20px 0;
+        margin: 30px 0;
         border-radius: 10px;
         background-color: rgb(128 128 128 / 10%);
         color: rgb(255 255 255 / 75%);
     }
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 10px;
-        list-style-type: none;
+    nav {
+        display: inline-flex;
+        gap: 40px;
     }
 
     a {
         text-decoration: none;
         color: white;
+        position: relative;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
+    }
+
+    a:focus:after,
+    a:hover:after {
+        width: 100%;
+        left: 0%;
+    }
+
+    a:after {
+        content: "";
+        pointer-events: none;
+        bottom: -3px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        background-color: #fff;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 300ms;
+        transition-property: width, left;
     }
 </style>
