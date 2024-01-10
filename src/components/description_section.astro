@@ -3,10 +3,45 @@ import { getXpYears } from "../scripts/utils";
 ---
 
 <section>
-    <h2>{getXpYears} años de experiencia</h2>
+    <div class="xp">
+        <h2>
+            <sup>+</sup><span>{getXpYears}</span> años de experiencia
+        </h2>
+        <div class="line line2"></div>
+    </div>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque id
         libero dicta tempora, adipisci, quis eos, saepe perspiciatis quos illum
         ipsum ea sed fugiat repellendus odit commodi illo tenetur quod?
     </p>
 </section>
+
+<style>
+    .xp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+
+    .line {
+        display: flex;
+        border: 1px solid white;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex: auto;
+        margin-left: 20px;
+        height: -1px;
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    p {
+        border-bottom: 2px solid white;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+</style>
