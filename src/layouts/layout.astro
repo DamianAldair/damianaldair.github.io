@@ -28,6 +28,8 @@ const maxwidth = 800;
 <style define:vars={{ maxwidth }}>
 	html,
 	body {
+		--fg-color: rgb(200 230 255);
+		--bg-color: rgb(0 20 35);
 		--bg-card: rgb(247, 247, 247);
 		font-family:
 			system-ui,
@@ -49,27 +51,8 @@ const maxwidth = 800;
 		flex-direction: column;
 		flex-wrap: nowrap;
 		align-items: center;
-		background: rgb(2, 0, 36);
-		background: -moz-linear-gradient(
-			90deg,
-			rgba(2, 0, 36, 1) 0%,
-			rgba(24, 24, 77, 1) 50%,
-			rgba(2, 0, 36, 1) 100%
-		);
-		background: -webkit-linear-gradient(
-			90deg,
-			rgba(2, 0, 36, 1) 0%,
-			rgba(24, 24, 77, 1) 50%,
-			rgba(2, 0, 36, 1) 100%
-		);
-		background: linear-gradient(
-			90deg,
-			rgba(2, 0, 36, 1) 0%,
-			rgba(24, 24, 77, 1) 50%,
-			rgba(2, 0, 36, 1) 100%
-		);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#020024",GradientType=1);
-		color: white;
+		background: var(--bg-color);
+		color: var(--bg-card);
 	}
 
 	@media (prefers-reduced-motion: reduce) {

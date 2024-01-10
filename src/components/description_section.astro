@@ -5,16 +5,26 @@ import { getXpYears } from "../scripts/utils";
 <section>
     <div class="xp">
         <h2>
-            <sup>+</sup><span>{getXpYears}</span> años de experiencia
+            <sup>+</sup><span class="years">{getXpYears}</span> años de
+            experiencia
         </h2>
-        <div class="line line2"></div>
+        <hr class="line" />
     </div>
     <p>
-        Graduado de Ingeniería Informática en la Universidad Tecnológica de La
-        Habana. Centrado en el desarrollo de aplicaciones móviles y apacionado
-        por la UI y UX. Dispuesto a afrontar nuevos retos y a experimentar con
-        nuevas tecnologías. Enfocado en resultados eficientes y de calidad.
+        <span class="p1"
+            >Graduado de Ingeniería Informática en la Universidad Tecnológica de
+            La Habana.
+        </span>
+        <span class="p2"
+            >Centrado en el desarrollo de aplicaciones móviles y apacionado por
+            la UI y UX.
+        </span>
+        <span class="p3"
+            >Dispuesto a afrontar nuevos retos y a experimentar con nuevas
+            tecnologías. Enfocado en resultados eficientes y de calidad.
+        </span>
     </p>
+    <hr />
 </section>
 
 <style>
@@ -23,26 +33,42 @@ import { getXpYears } from "../scripts/utils";
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: baseline;
+        color: var(--fg-color);
     }
 
-    .line {
+    hr {
         display: flex;
-        border: 1px solid white;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         flex: auto;
+        margin: 20px 0;
+        border: 1px solid rgb(195 195 255 / 20%);
+    }
+
+    .line {
         margin-left: 20px;
     }
 
-    span {
+    .years {
         font-size: 40px;
     }
 
     p {
-        border-bottom: 2px solid white;
-        padding-bottom: 50px;
-        margin-bottom: 50px;
+        padding-bottom: 40px;
         text-wrap: pretty;
+        font-size: 1.2rem;
+    }
+
+    .p1 {
+        color: rgb(200 255 200);
+    }
+
+    .p2 {
+        color: rgb(220 200 220);
+    }
+
+    .p3 {
+        color: rgb(255 190 190);
     }
 </style>

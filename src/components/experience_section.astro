@@ -60,7 +60,7 @@ const arrowsize = 18;
 
 <style>
     .section {
-        border-left: 2px solid white;
+        border-left: 2px solid var(--fg-color);
         margin-left: 14px;
         padding-left: 35px;
     }
@@ -70,6 +70,7 @@ const arrowsize = 18;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: baseline;
+        color: var(--fg-color);
     }
 
     .circle {
@@ -77,7 +78,7 @@ const arrowsize = 18;
         --translate: -41px;
         height: var(--size);
         width: var(--size);
-        background-color: white;
+        background-color: var(--fg-color);
         border-radius: var(--size);
         margin-left: var(--translate);
         margin-right: calc(-1 * var(--translate) - var(--size));
