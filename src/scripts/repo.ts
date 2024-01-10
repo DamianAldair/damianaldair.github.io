@@ -55,6 +55,16 @@ export const projects: Project[] = [
         ],
         url: 'https://pub.dev/packages/qr_eu_digital_covid_certificate',
     },
+    {
+        img: 'just_transitions.png',
+        name: 'QR',
+        description: 'COVID-19 digital vaccination certificates.',
+        skills: [
+            'dart',
+            'flutter',
+        ],
+        url: 'https://pub.dev/packages/qr_eu_digital_covid_certificate',
+    },
 ];
 
 export interface Experience {

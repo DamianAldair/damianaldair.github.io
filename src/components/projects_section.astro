@@ -1,6 +1,8 @@
 ---
-import SectionTitle from "./section_title.astro";
+import { projects } from "../scripts/repo";
 import CheckupListIcon from "./icons/checkup_list.astro";
+import ProjectItem from "./project_item.astro";
+import SectionTitle from "./section_title.astro";
 
 const iconsize = 30;
 ---
@@ -10,4 +12,30 @@ const iconsize = 30;
         <CheckupListIcon slot="icon" height={iconsize} width={iconsize} />
         <h2 slot="title">Proyectos</h2>
     </SectionTitle>
+
+    <div>
+        {
+            projects
+                .toReversed()
+                .map((p) => (
+                    <ProjectItem
+                        img={p.img}
+                        name={p.name}
+                        description={p.description}
+                        skills={p.skills}
+                        url={p.url}
+                    />
+                ))
+        }
+    </div>
 </section>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+    }
+</style>

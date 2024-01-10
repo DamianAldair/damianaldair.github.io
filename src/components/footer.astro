@@ -1,6 +1,6 @@
 ---
 interface Props {
-    maxwidth: string;
+    maxwidth: number;
 }
 
 const { maxwidth } = Astro.props;
@@ -14,7 +14,7 @@ const year: number = new Date().getFullYear();
 
 <style define:vars={{ maxwidth }}>
     footer {
-        max-width: var(--maxwidth);
+        max-width: calc(1px * var(--maxwidth));
         display: flex;
         flex-direction: row;
         align-items: center;
