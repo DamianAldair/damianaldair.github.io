@@ -160,11 +160,8 @@ const path = `/images/${img}`;
     }
 
     p {
+        text-wrap: pretty;
         --lines: 4;
-        display: -webkit-box;
-        -webkit-line-clamp: var(--lines);
-        -webkit-box-orient: vertical;  
-        overflow: hidden;
         height: calc(1.7rem * var(--lines));
     }
 

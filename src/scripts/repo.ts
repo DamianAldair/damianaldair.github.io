@@ -48,7 +48,7 @@ export const projects: Project[] = [
     {
         img: 'qr_eu_covid.png',
         name: 'QR - EU Digital COVID Certificate',
-        description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado de vacunación europeo de COVID-19.',
+        description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado europeo de vacunación contra COVID-19.',
         skills: [
             'dart',
             'flutter',
@@ -69,21 +69,8 @@ export const experiences: Experience[] = [
     {
         startYear: 2021,
         finishYear: 2023,
-        title: 'Desarrollador móvil como estudiante de la CUJAE',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque id libero dicta tempora, adipisci, quis eos, saepe perspiciatis quos illum ipsum ea sed fugiat repellendus odit commodi illo tenetur quod?',
-        url: 'https://www.redalyc.org/journal/5600/560059292002/html/',
-    },
-    {
-        startYear: 2024,
-        finishYear: 2024,
-        title: 'Trabajo para un chino',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque id libero dicta tempora, adipisci, quis eos, saepe perspiciatis quos illum ipsum ea sed fugiat repellendus odit commodi illo tenetur quod?'
-    },
-    {
-        startYear: 2023,
-        finishYear: -1,
-        title: 'Confeción de mi porfolio',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque id libero dicta tempora, adipisci, quis eos, saepe perspiciatis quos illum ipsum ea sed fugiat repellendus odit commodi illo tenetur quod?'
+        title: 'Proyecto Guatiní',
+        description: 'Desarrollo de la versión 3.0 de la aplicación móvil para el proyecto Guatiní. Enciclopedia sobre seres vivos, principalmente offline y con posibilidades de acceder a información adicional gracias al consumo de APIs de enciclopedias libres. Rediseño de la base de datos utilizada. Diseño de la forma de despliegue y gestión  de la información local mediante la automatización de la compilación de aplicaciones móviles auxiliares con información personalizada.',
     },
 ];
 
