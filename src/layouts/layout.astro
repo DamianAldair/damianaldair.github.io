@@ -1,6 +1,12 @@
 ---
+interface Props {
+	includeHeader?: boolean;
+}
+
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
+
+const { includeHeader = true } = Astro.props;
 
 const title: string = "Damian Aldair";
 const description: string =
@@ -19,8 +25,10 @@ const maxwidth = 800;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
+		{includeHeader && <Header />}
+		<main>
+			<slot />
+		</main>
 		<Footer maxwidth={maxwidth} />
 	</body>
 </html>

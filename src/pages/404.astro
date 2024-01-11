@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout includeHeader={false}>
+    <div class="main">
+        <div class="error404">
+            <span class="_error">Error</span>
+            <span class="_404">404</span>
+            <span class="_notfound">Página no encontrada</span>
+        </div>
+        <a href="/">Ir a la página principal</a>
+    </div>
+</Layout>
+
+<style>
+    .main,
+    .error404 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255 255 255 / 0.35);
+    }
+
+    .main {
+        min-width: 300px;
+        width: calc(100vw - 40px);
+        max-width: 800px;
+        height: calc(100vh - 125px);
+    }
+
+    .error404 {
+        margin: auto;
+    }
+
+    ._error {
+        font-size: 80px;
+    }
+
+    ._404 {
+        margin-top: -45px;
+        font-size: 150px;
+    }
+
+    ._notfound {
+        font-size: 25px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 8px 25px;
+        margin: auto;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        transition: all 0.1s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    a:hover {
+        background-color: rgb(255 255 255 / 15%);
+    }
+</style>
