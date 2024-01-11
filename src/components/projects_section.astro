@@ -16,7 +16,7 @@ const iconsize = 30;
     <div>
         {
             projects
-                .toReversed()
+                .reverse()
                 .map((p) => (
                     <ProjectItem
                         img={p.img}
