@@ -28,7 +28,7 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        img: 'just_transitions.png',
+        img: 'just_transitions.webp',
         name: 'JustTransitions',
         description: 'Un paquete para usar con Flutter y faciliar la navegación entre rutas utilizando animaciones y personalizándolas con diferentes carácterísticas.',
         skillImages: [
@@ -38,7 +38,7 @@ export const projects: Project[] = [
         url: 'https://pub.dev/packages/just_transitions',
     },
     {
-        img: 'qr_eu_covid.png',
+        img: 'qr_eu_covid.webp',
         name: 'QR - EU Digital COVID Certificate',
         description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado europeo de vacunación contra COVID-19.',
         skillImages: [
