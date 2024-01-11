@@ -42,6 +42,12 @@ const img = `/icons/${getImgFromSkill(name)}`;
         align-items: center;
     }
 
+    @media screen and (max-width: 345px) {
+        article {
+            padding: 30px;
+        }
+    }
+
     article > :not(span) {
         transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
     }

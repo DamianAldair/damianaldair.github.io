@@ -40,7 +40,7 @@ export const projects: Project[] = [
     {
         img: 'qr_eu_covid.webp',
         name: 'QR - EU Digital COVID Certificate',
-        description: 'Un paquete para usar con Flutter que analizar sintácticamente el texto plano cifrado contenido en los códigos QR del certificado europeo de vacunación contra COVID-19.',
+        description: 'Un paquete para usar con Flutter que analiza sintácticamente el texto plano cifrado contenido en los códigos QR del certificado europeo de vacunación contra COVID-19.',
         skillImages: [
             'dart',
             'flutter',
