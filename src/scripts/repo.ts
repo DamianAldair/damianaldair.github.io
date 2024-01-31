@@ -30,7 +30,7 @@ export const projects: Project[] = [
     {
         img: 'just_transitions.webp',
         name: 'JustTransitions',
-        description: 'Un paquete para usar con Flutter y faciliar la navegación entre rutas utilizando animaciones y personalizándolas con diferentes carácterísticas.',
+        description: 'Un paquete para usar con Flutter y facilitar la navegación entre rutas utilizando animaciones y personalizándolas con diferentes características.',
         skillImages: [
             'dart',
             'flutter',
