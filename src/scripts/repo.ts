@@ -47,6 +47,16 @@ export const projects: Project[] = [
         ],
         url: 'https://pub.dev/packages/qr_eu_digital_covid_certificate',
     },
+    {
+        img: 'kb_checker.webp',
+        name: 'KB Checker',
+        description: 'Una aplicación de escritorio para probar las teclas del teclado y detectar fallas. Soporta distribuciones ANSI e ISO, de Estados Unidos, España y Latinoamérica.',
+        skillImages: [
+            'dart',
+            'flutter',
+        ],
+        url: 'https://github.com/DamianAldair/kb_checker',
+    },
 ];
 
 export interface Experience {
