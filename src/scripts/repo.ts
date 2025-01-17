@@ -74,4 +74,16 @@ export const experiences: Experience[] = [
         title: 'Proyecto Guatiní',
         description: 'Desarrollo de la versión 3.0 de la aplicación móvil para el proyecto Guatiní. Enciclopedia sobre seres vivos, principalmente offline y con posibilidades de acceder a información adicional gracias al consumo de APIs de enciclopedias libres. Rediseño de la base de datos utilizada. Diseño de la forma de despliegue y gestión  de la información local mediante la automatización de la compilación de aplicaciones móviles auxiliares con información personalizada.',
     },
+    {
+        startYear: 2024,
+        finishYear: -1,
+        title: 'Empresa de Tecnologías de la Información',
+        description: 'Desarrollo de bibliotecas para facilitar la comunicación con dispositivos de autenticación biométrica de las marcas ZKTeco y Hikvision.\nDesarrollo de una aplicación móvil para facilitar la gestión de insumos en almacenes a partir del uso de dispositivos con lectores QR y consumo de API.',
+    },
+    {
+        startYear: 2024,
+        finishYear: -1,
+        title: 'Code43W',
+        description: 'Desarrollo de aplicaciones móviles para mejorar la experiencia de cálculos de agroproductividad de los suelos y el uso de fertilizantes sobre estos, a partir del uso de bases de datos locales en SQLite y actualizaciones periódicas de la información gracias al consumo de APIs.',
+    },
 ];
